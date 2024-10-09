@@ -18,10 +18,17 @@ _local: [=~#Style.camelCase]:  _
 #Definition: _
 
 instance: [N=~#Style.camelCase]: {
+	// ALIAS and LET in abbreviation of uppercase initials.
+	// ALIAS should only be referred in a limited scope near definition
 	let FN = name + "-suffix"
 	name: N
 	fullName: FN
 }
+
+instances: [
+	// Loop index, key, values in abbreviation of lowercase initials.
+	for _, i in instance {i}
+]
 
 // Specially
 #Terraform: [=~#Style.snake_case]: _
