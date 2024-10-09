@@ -17,7 +17,11 @@ _local: [=~#Style.camelCase]:  _
 
 #Definition: _
 
-instance: [=~#Style.camelCase]: _
+instance: [N=~#Style.camelCase]: {
+	let FN = name + "-suffix"
+	name: N
+	fullName: FN
+}
 
 // Specially
 #Terraform: [=~#Style.snake_case]: _
