@@ -1,4 +1,4 @@
-package coding_style
+package codingstyle
 
 #Style: {
 	camelCase:    "^[a-z][a-zA-Z0-9]*$"
@@ -9,7 +9,7 @@ package coding_style
 	lowercase:    "^[a-z][a-z0-9]*$"
 }
 
-package: name: =~#Style.snake_case
+package: name: =~#Style.lowercase
 
 #var: [=~#Style.camelCase]:    _
 _local: [=~#Style.camelCase]:  _
@@ -29,6 +29,8 @@ instances: [
 	// Loop index, key, values in abbreviation of lowercase initials.
 	for _, i in instance {i}
 ]
+
+Exports: #Style.PascalCase
 
 // Specially
 #Terraform: [=~#Style.snake_case]: _
