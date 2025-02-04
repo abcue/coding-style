@@ -1,6 +1,6 @@
 # Coding Style
 
-Self described in [coding-style](./coding-style.cue)
+Self described in [coding-style.cue](./coding-style.cue)
 
 ## Patterns
 
