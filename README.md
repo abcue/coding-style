@@ -94,7 +94,7 @@ Override default conditionally
 *r | (r & {expr: strings.Replace(r.expr, T, "\(#var.alerts.threshold[r.alert][strings.ToLower(r.labels.severity)])", -1)})
 ```
 
-* Default to r when `#var.alerts.threshold[r.alert][strings.ToLower(r.labels.severity)]` evals to `_|_`
+* Default to `r` when threshold not defined, i.e `#var.alerts.threshold[r.alert][strings.ToLower(r.labels.severity)]` evals to `_|_`
 
 ## Appendix
 
